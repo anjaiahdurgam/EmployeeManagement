@@ -7,7 +7,7 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
 	<style type="text/css">
-		@import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css');
+        @import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css');
 @media(min-width:768px) {
     body {
         margin-top: 50px;
@@ -239,83 +239,6 @@ table#acrylic {
             transition: 0.2s all;
         }
 
-        /*for movable checkbox*/
-
-
-/* The switch - the box around the slider */
-.switch {
-  position: relative;
-  display: inline-block;
-  width: 60px;
-  height: 34px;
-  float:right;
-}
-
-/* Hide default HTML checkbox */
-.switch input {display:none;}
-
-/* The slider */
-.slider {
-  position: absolute;
-  cursor: pointer;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: #ccc;
-  -webkit-transition: .4s;
-  transition: .4s;
-}
-
-.slider:before {
-  position: absolute;
-  content: "";
-  height: 26px;
-  width: 26px;
-  left: 4px;
-  bottom: 4px;
-  background-color: white;
-  -webkit-transition: .4s;
-  transition: .4s;
-}
-
-input.default:checked + .slider {
-  background-color: #444;
-}
-input.primary:checked + .slider {
-  background-color: #2196F3;
-}
-input.success:checked + .slider {
-  background-color: #8bc34a;
-}
-input.info:checked + .slider {
-  background-color: #3de0f5;
-}
-input.warning:checked + .slider {
-  background-color: #FFC107;
-}
-input.danger:checked + .slider {
-  background-color: #f44336;
-}
-
-input:focus + .slider {
-  box-shadow: 0 0 1px #2196F3;
-}
-
-input:checked + .slider:before {
-  -webkit-transform: translateX(26px);
-  -ms-transform: translateX(26px);
-  transform: translateX(26px);
-}
-
-/* Rounded sliders */
-.slider.round {
-  border-radius: 34px;
-}
-
-.slider.round:before {
-  border-radius: 50%;
-}
 	</style>
 </head>
 <body>
@@ -371,10 +294,8 @@ input:checked + .slider:before {
                         <li><a href="#"><i class="fa fa-angle-double-right"></i> SUBMENU 2.3</a></li>
                     </ul>
                 </li> -->
-
-              <%@include file="empsidebar.jsp" %>             
-                
-
+               
+               <%@include file="empsidebar.jsp" %>
                 
 
             </ul>
@@ -387,36 +308,33 @@ input:checked + .slider:before {
             <!-- Page Heading -->
             <div class="row" id="main" >
                 <div class="col-sm-12 col-md-12 well" id="content">
-                   
-                      <div class="wrapper">
+                             <div class="wrapper">
         <table id="acrylic">
             <thead>
                 <tr>
-                    <th>S.NO</th>
-                    <th>Employee Id</th>
-                    <th> Date</th>
-                    <th>Month</th>
-                   
+                     <th>Mess</th>
+    <th>Employee Id</th>
+    <th>From Date</th>
+    <th>To Date</th>
+    <th>Type Of Leave</th>
+    <th>status</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
-                   <td>1</td>
-    <td>123456</td>
-    <td>2018-08-22 12:00:40.23</td>
-    <td>Aug</td>
-    </tr>   
-    <tr>
-<td colspan="3">Total Days</td>
-<td>10</td>
-</tr>
-
-             </tbody>
+                    <td>123456</td>
+                    <td>Ummidi</td>
+                    <td>Manikanta</td>
+                    <td>mani@gmail.com</td>
+                    <td>25</td>
+                    <td>79</td>
+ 
+                   
+                </tr>
+               
+            </tbody>
         </table>
     </div>
-
-
-
                 </div>
             </div>
             <!-- /.row -->

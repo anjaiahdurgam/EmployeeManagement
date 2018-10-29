@@ -2,8 +2,10 @@ package com.app.controller;
 
 import javax.servlet.http.HttpServletRequest;
 
+import org.dom4j.rule.Mode;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -144,6 +146,26 @@ public class EmployeeController {
 
 		iemployeeService.update(employee);
 		return "employeehome";
+	}
+	@RequestMapping("/leavePage")
+	public ModelAndView getLeavePage()
+	{
+	    model.setViewName("applyLeavePage");
+	    return model;
+	}
+	
+	@RequestMapping("/getSlip")
+	public ModelAndView getPaySlipPage()
+	{
+		model = new ModelAndView("downloadPaySlip");
+		return model;
+	}
+	
+	@RequestMapping("/getAttenPage")
+	public ModelAndView getAttenPage()
+	{
+		model.setViewName("myattend");
+		return model;
 	}
 
 

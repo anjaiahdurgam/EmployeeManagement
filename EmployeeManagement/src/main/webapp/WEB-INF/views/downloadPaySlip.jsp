@@ -150,171 +150,60 @@
 .navbar-brand {
     padding: 5px 15px;
 }
-table#acrylic {
-            border-collapse: separate;
-            background: #fff;
-            -moz-border-radius: 5px;
-            -webkit-border-radius: 5px;
-            border-radius: 5px;
-            margin: 50px auto;
-            -moz-box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
-            -webkit-box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
-            box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
-            cursor: pointer;
-        }
-        
-        #acrylic thead {
-            -moz-border-radius: 5px;
-            -webkit-border-radius: 5px;
-            border-radius: 5px;
-        }
-        
-        #acrylic thead th {
-            font-family: 'Roboto';
-            font-size: 16px;
-            font-weight: 400;
-            color: #fff;
-            text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.5);
-            text-align: left;
-            padding: 20px;
-            background-size: 100%;
-            background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #646f7f), color-stop(100%, #4a5564));
-            background-image: -moz-linear-gradient(#646f7f, #4a5564);
-            background-image: -webkit-linear-gradient(#646f7f, #4a5564);
-            background-image: linear-gradient(#646f7f, #4a5564);
-            border-top: 1px solid #858d99;
-        }
-        
-        #acrylic thead th:first-child {
-            -moz-border-top-right-radius: 5px;
-            -webkit-border-top-left-radius: 5px;
-            border-top-left-radius: 5px;
-        }
-        
-        #acrylic thead th:last-child {
-            -moz-border-top-right-radius: 5px;
-            -webkit-border-top-right-radius: 5px;
-            border-top-right-radius: 5px;
-        }
-        
-        #acrylic tbody tr td {
-            font-family: 'Open Sans', sans-serif;
-            font-weight: 400;
-            color: #5f6062;
-            font-size: 13px;
-            padding: 20px 20px 20px 20px;
-            border-bottom: 1px solid #e0e0e0;
-        }
-        
-        #acrylic tbody tr:nth-child(2n) {
-            background: #f0f3f5;
-        }
-        
-        #acrylic tbody tr:last-child td {
-            border-bottom: none;
-        }
-        
-        #acrylic tbody tr:last-child td:first-child {
-            -moz-border-bottom-right-radius: 5px;
-            -webkit-border-bottom-left-radius: 5px;
-            border-bottom-left-radius: 5px;
-        }
-        
-        #acrylic tbody tr:last-child td:last-child {
-            -moz-border-bottom-right-radius: 5px;
-            -webkit-border-bottom-right-radius: 5px;
-            border-bottom-right-radius: 5px;
-        }
-        
-        #acrylic tbody:hover > tr td {
-            filter: progid: DXImageTransform.Microsoft.Alpha(Opacity=50);
-            opacity: 0.5;
-        }
-        
-        #acrylic tbody:hover > tr:hover td {
-            text-shadow: none;
-            color: #2d2d2d;
-            filter: progid: DXImageTransform.Microsoft.Alpha(enabled=false);
-            opacity: 1;
-            transition: 0.2s all;
-        }
 
-        /*for movable checkbox*/
-
-
-/* The switch - the box around the slider */
-.switch {
-  position: relative;
-  display: inline-block;
-  width: 60px;
-  height: 34px;
-  float:right;
+/*form*/
+body{
+    background: -webkit-linear-gradient(left, #0072ff, #00c6ff);
 }
-
-/* Hide default HTML checkbox */
-.switch input {display:none;}
-
-/* The slider */
-.slider {
-  position: absolute;
-  cursor: pointer;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: #ccc;
-  -webkit-transition: .4s;
-  transition: .4s;
+.contact-form{
+    background: #fff;
+    margin-top: 10%;
+    margin-bottom: 5%;
+    width: 70%;
 }
-
-.slider:before {
-  position: absolute;
-  content: "";
-  height: 26px;
-  width: 26px;
-  left: 4px;
-  bottom: 4px;
-  background-color: white;
-  -webkit-transition: .4s;
-  transition: .4s;
+.contact-form .form-control{
+    border-radius:1rem;
 }
-
-input.default:checked + .slider {
-  background-color: #444;
+.contact-image{
+    text-align: center;
 }
-input.primary:checked + .slider {
-  background-color: #2196F3;
+.contact-image img{
+    border-radius: 6rem;
+    width: 11%;
+    margin-top: -3%;
+    transform: rotate(29deg);
 }
-input.success:checked + .slider {
-  background-color: #8bc34a;
+.contact-form form{
+    padding: 14%;
 }
-input.info:checked + .slider {
-  background-color: #3de0f5;
+.contact-form form .row{
+    margin-bottom: -7%;
 }
-input.warning:checked + .slider {
-  background-color: #FFC107;
+.contact-form h3{
+    margin-bottom: 8%;
+    margin-top: -10%;
+    text-align: center;
+    color: #0062cc;
 }
-input.danger:checked + .slider {
-  background-color: #f44336;
+.contact-form .btnContact {
+    width: 50%;
+    border: none;
+    border-radius: 1rem;
+    padding: 1.5%;
+    background: #dc3545;
+    font-weight: 600;
+    color: #fff;
+    cursor: pointer;
 }
-
-input:focus + .slider {
-  box-shadow: 0 0 1px #2196F3;
-}
-
-input:checked + .slider:before {
-  -webkit-transform: translateX(26px);
-  -ms-transform: translateX(26px);
-  transform: translateX(26px);
-}
-
-/* Rounded sliders */
-.slider.round {
-  border-radius: 34px;
-}
-
-.slider.round:before {
-  border-radius: 50%;
+.btnContactSubmit
+{
+    width: 50%;
+    border-radius: 1rem;
+    padding: 1.5%;
+    color: #fff;
+    background-color: #0062cc;
+    border: none;
+    cursor: pointer;
 }
 	</style>
 </head>
@@ -371,11 +260,8 @@ input:checked + .slider:before {
                         <li><a href="#"><i class="fa fa-angle-double-right"></i> SUBMENU 2.3</a></li>
                     </ul>
                 </li> -->
-
-              <%@include file="empsidebar.jsp" %>             
                 
-
-                
+                <%@include file="empsidebar.jsp" %>                
 
             </ul>
         </div>
@@ -387,36 +273,33 @@ input:checked + .slider:before {
             <!-- Page Heading -->
             <div class="row" id="main" >
                 <div class="col-sm-12 col-md-12 well" id="content">
-                   
-                      <div class="wrapper">
-        <table id="acrylic">
-            <thead>
-                <tr>
-                    <th>S.NO</th>
-                    <th>Employee Id</th>
-                    <th> Date</th>
-                    <th>Month</th>
-                   
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                   <td>1</td>
-    <td>123456</td>
-    <td>2018-08-22 12:00:40.23</td>
-    <td>Aug</td>
-    </tr>   
-    <tr>
-<td colspan="3">Total Days</td>
-<td>10</td>
-</tr>
+                     <div class="container contact-form">
+          
+            <form method="post">
+                <h3>Download Pay Slip</h3>
+               <div class="row">
+                    <div class="col-md-12">
+                        <div class="form-group">
 
-             </tbody>
-        </table>
-    </div>
-
-
-
+                            <select class="form-control">
+                                <option>select month</option>
+                                <option>empList</option>
+                            </select>
+                           
+                        </div>
+                        <div class="form-group">
+                            <input type="number" name="txtEmail" class="form-control" placeholder="enter year" value="" />
+                        </div>
+                         
+                        
+                        <div class="form-group">
+                            <input type="submit" name="btnSubmit" class="btnContact" value="Get Pay slip" />
+                        </div>
+                    </div>
+                    
+                </div>
+            </form>
+</div>
                 </div>
             </div>
             <!-- /.row -->

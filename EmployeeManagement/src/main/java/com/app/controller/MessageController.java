@@ -68,7 +68,6 @@ public class MessageController {
 		return model;
 
 	}
-
 	
 	@RequestMapping(value = "/viewMsgs")
 	public ModelAndView viewMsgDetails(@RequestParam("id") int id) {
