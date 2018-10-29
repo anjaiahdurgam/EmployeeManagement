@@ -272,6 +272,8 @@ table#acrylic {
                     <li><a href="#"><i class="fa fa-fw fa-cog"></i> Change Password</a></li>
                     <li class="divider"></li>
                     <li><a href="#"><i class="fa fa-fw fa-power-off"></i> Logout</a></li>
+                    
+                    <input type="hidden" name="dummy">
                 </ul>
             </li>
         </ul>
