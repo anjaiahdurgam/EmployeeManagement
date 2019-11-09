@@ -31,8 +31,9 @@ public class EmployeeController {
 
 	ModelAndView model = new ModelAndView();
 
-	// Home page or Login page
+	// Home1 page or Login page
 	@RequestMapping(value = { "/", "/dashboard" })
+
 	public ModelAndView home() {
 
 		model.setViewName("login");
@@ -141,32 +142,29 @@ public class EmployeeController {
 		iemployeeService.update(employee);
 		return "employeehome";
 	}
+
 	@RequestMapping(value = "/dummy", method = RequestMethod.POST)
 	public String dummy(@ModelAttribute("employee") Employee employee) {
 
 		iemployeeService.update(employee);
 		return "employeehome";
 	}
+
 	@RequestMapping("/leavePage")
-	public ModelAndView getLeavePage()
-	{
-	    model.setViewName("applyLeavePage");
-	    return model;
-	}
-	
-	@RequestMapping("/getSlip")
-	public ModelAndView getPaySlipPage()
-	{
-		model = new ModelAndView("downloadPaySlip");
+	public ModelAndView getLeavePage() {
+		model.setViewName("applyLeavePage");
 		return model;
 	}
-	
+
+	@RequestMapping("/getSlip")
+	public ModelAndView getPaySlipPage() {
+		model.setViewName("downloadPaySlip");
+		return model;
+	}
+
 	@RequestMapping("/getAttenPage")
-	public ModelAndView getAttenPage()
-	{
+	public ModelAndView getAttenPage() {
 		model.setViewName("myattend");
 		return model;
 	}
-
-
 }

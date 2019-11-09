@@ -28,6 +28,7 @@ public class Employee {
 	private String passowrd;
 	private String contact;
 	private boolean status;
+
 	public boolean getStatus() {
 		return status;
 	}
@@ -175,7 +176,7 @@ public class Employee {
 
 	public Employee() {
 		super();
-		// TODO Auto-generated constructor stub
+
 	}
 
 	public Employee(int id, String firstName, String lastName, String email, String designation, String passowrd,

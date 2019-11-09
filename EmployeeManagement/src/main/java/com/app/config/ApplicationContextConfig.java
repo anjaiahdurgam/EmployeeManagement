@@ -34,6 +34,7 @@ import com.app.entity.Message;
 @ComponentScan("com.app")
 @EnableTransactionManagement
 public class ApplicationContextConfig {
+
 	@Bean(name = "viewResolver")
 	public InternalResourceViewResolver getViewResolver() {
 		InternalResourceViewResolver viewResolver = new InternalResourceViewResolver();
@@ -67,7 +68,8 @@ public class ApplicationContextConfig {
 	public SessionFactory getSessionFactory(DataSource dataSource) {
 		LocalSessionFactoryBuilder sessionBuilder = new LocalSessionFactoryBuilder(dataSource);
 		sessionBuilder.addProperties(getHibernateProperties());
-		sessionBuilder.addAnnotatedClasses(Employee.class, Address.class, Hr.class, Admin.class, Department.class,Message.class);
+		sessionBuilder.addAnnotatedClasses(Employee.class, Address.class, Hr.class, Admin.class, Department.class,
+				Message.class);
 		return sessionBuilder.buildSessionFactory();
 	}
 
@@ -96,7 +98,7 @@ public class ApplicationContextConfig {
 	public IHrDAO gethrDAO(SessionFactory sessionFactory) {
 		return new HrDAOImpl(sessionFactory);
 	}
-	
+
 	@Autowired
 	@Bean(name = "iMessageDAO")
 	public IMessageDAO getIMessageDAO(SessionFactory sessionFactory) {
