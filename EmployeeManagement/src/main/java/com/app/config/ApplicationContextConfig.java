@@ -90,6 +90,7 @@ public class ApplicationContextConfig {
 		return new AdminDAOImpl(sessionFactory);
 	}
 
+	
 	@Autowired
 	@Bean(name = "iHrDAO")
 	public IHrDAO gethrDAO(SessionFactory sessionFactory) {
