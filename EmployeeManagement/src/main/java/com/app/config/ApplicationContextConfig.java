@@ -50,7 +50,6 @@ public class ApplicationContextConfig {
 		dataSource.setUrl("jdbc:mysql://localhost:3306/springempmanagement");
 		dataSource.setUsername("root");
 		dataSource.setPassword("root");
-
 		return dataSource;
 	}
 
@@ -59,7 +58,6 @@ public class ApplicationContextConfig {
 		properties.put("hibernate.show_sql", "true");
 		properties.put("hibernate.dialect", "org.hibernate.dialect.MySQLDialect");
 		properties.put("hibernate.hbm2ddl.auto", "update");
-
 		return properties;
 	}
 
@@ -77,7 +75,6 @@ public class ApplicationContextConfig {
 	@Bean(name = "transactionManager")
 	public HibernateTransactionManager getTransactionManager(SessionFactory sessionFactory) {
 		HibernateTransactionManager transactionManager = new HibernateTransactionManager(sessionFactory);
-
 		return transactionManager;
 	}
 
@@ -104,5 +101,4 @@ public class ApplicationContextConfig {
 	public IMessageDAO getIMessageDAO(SessionFactory sessionFactory) {
 		return new MessageDAOImpl(sessionFactory);
 	}
-
 }
