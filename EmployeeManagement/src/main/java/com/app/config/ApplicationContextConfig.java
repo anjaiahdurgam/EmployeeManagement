@@ -43,6 +43,7 @@ public class ApplicationContextConfig {
 		return viewResolver;
 	}
 
+	
 	@Bean(name = "dataSource")
 	public DataSource getDataSource() {
 		BasicDataSource dataSource = new BasicDataSource();
