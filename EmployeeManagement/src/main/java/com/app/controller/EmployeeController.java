@@ -169,37 +169,5 @@ public class EmployeeController {
 		return model;
 	}
 	
-	//this is adding for sreeeni 
-	
-	//this is adding for sreeeni 
-	
-	
-	//this is adding for sreeeni 
-	
-	
-	@RequestMapping("/getAttenPage")
-	public ModelAndView getAttenPage1() {
-		model.setViewName("myattend");
-		return model;
-	}
-	
-	@RequestMapping("/getAttenPage")
-	public ModelAndView getAttenPage2() {
-		model.setViewName("myattend");
-		return model;
-	}
-	
-	@RequestMapping("/getAttenPage")
-	public ModelAndView getAttenPage3() {
-		model.setViewName("myattend");
-		return model;
-	}
-	
-	@RequestMapping("/getAttenPage")
-	public ModelAndView getAttenPage4() {
-		model.setViewName("myattend");
-		return model;
-	}
-
-	
+		
 }
