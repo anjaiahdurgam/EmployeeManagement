@@ -171,6 +171,12 @@ public class EmployeeController {
 	
 	//this is adding for sreeeni 
 	
+	//this is adding for sreeeni 
+	
+	
+	//this is adding for sreeeni 
+	
+	
 	@RequestMapping("/getAttenPage")
 	public ModelAndView getAttenPage1() {
 		model.setViewName("myattend");
