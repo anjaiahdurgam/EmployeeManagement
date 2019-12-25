@@ -31,7 +31,7 @@ public class EmployeeController {
 
 	ModelAndView model = new ModelAndView();
 
-	// Home1 page or Login page
+	// Home1 page or Login page this is Srini
 	@RequestMapping(value = { "/", "/dashboard" })
 
 	public ModelAndView home() {
