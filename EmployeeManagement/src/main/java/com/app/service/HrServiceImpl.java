@@ -18,12 +18,11 @@ public class HrServiceImpl implements IHrService {
 	private IHrDAO iHrDAO;
 
 	public int save(Hr hrPersistance) {
-		// TODO Auto-generated method stub
 		return 0;
 	}
 
 	public List<Hr> findByAll() {
-List list=iHrDAO.findAllDetails();
+		List<Hr> list = iHrDAO.findAllDetails();
 		return list;
 	}
 
@@ -32,12 +31,11 @@ List list=iHrDAO.findAllDetails();
 	}
 
 	public Hr update(Hr hr) {
-		// TODO Auto-generated method stub
+
 		return null;
 	}
 
 	public void delete(int id) {
-		// TODO Auto-generated method stub
 
 	}
 

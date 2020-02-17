@@ -44,10 +44,10 @@ public class MessageDAOImpl implements IMessageDAO {
 
 	}
 
+	@SuppressWarnings("unchecked")
 	public List<Message> findAll() {
 		String string = "from Message m ";
-
-		List messages = sessionFactory.getCurrentSession().createQuery(string).list();
+		List<Message> messages = sessionFactory.getCurrentSession().createQuery(string).list();
 		return messages;
 	}
 

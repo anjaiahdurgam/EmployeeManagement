@@ -24,7 +24,7 @@ public class MesageServiceImpl implements IMessageService {
 	}
 
 	public List<Message> findAll() {
-		List list = iMessageDAO.findAll();
+		List<Message> list = iMessageDAO.findAll();
 
 		return list;
 	}
