@@ -24,7 +24,6 @@ import com.app.util.GetUserFromSession;
 @Controller
 public class EmployeeController {
 
-	//saving the space
 	@Autowired
 	private IEmployeeService iemployeeService;
 	@Autowired
@@ -32,9 +31,7 @@ public class EmployeeController {
 
 	ModelAndView model = new ModelAndView();
 
-	// Home1 page or Login page this is Srini
 	@RequestMapping(value = { "/", "/dashboard" })
-
 	public ModelAndView home() {
 
 		model.setViewName("login");
@@ -69,10 +66,10 @@ public class EmployeeController {
 
 	}
 
-	// loged Home page
+	// logged Home page
 	@RequestMapping(value = "/loginHome", method = RequestMethod.POST)
-	public ModelAndView loginCredent(@RequestParam("id") int empId, @RequestParam("passowrd") String password,
-			HttpServletRequest req, @RequestParam("emptype") String emptype) {
+	public ModelAndView loginCredent(HttpServletRequest req, @RequestParam("id") int empId,
+			@RequestParam("passowrd") String password, @RequestParam("emptype") String emptype) {
 
 		if (emptype.equals("Manager")) {
 			model.setViewName("manager/adminhome");

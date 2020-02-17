@@ -1,6 +1,5 @@
 package com.app.service;
 
-import java.util.Date;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -8,7 +7,6 @@ import org.springframework.stereotype.Service;
 
 import com.app.dao.IEmployeeDao;
 import com.app.entity.Address;
-import com.app.entity.Department;
 import com.app.entity.Employee;
 
 @Service
@@ -23,7 +21,7 @@ public class EmployeeServiceImpl implements IEmployeeService {
 	}
 
 	public List<Employee> findAllData() {
-		List emp = iEmployeeDao.getAllEmployee();
+		List<Employee> emp = iEmployeeDao.getAllEmployee();
 		return emp;
 	}
 

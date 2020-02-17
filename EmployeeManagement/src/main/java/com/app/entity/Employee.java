@@ -1,5 +1,6 @@
 package com.app.entity;
 
+import java.io.Serializable;
 import java.sql.Blob;
 import java.util.Date;
 
@@ -15,20 +16,35 @@ import org.springframework.format.annotation.DateTimeFormat;
 
 @Entity
 @Table(name = "EMPLOYEE_TB")
-public class Employee {
+public class Employee implements Serializable {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	@Id
 	@GeneratedValue
 	private int id;
 	private String firstName;
 	private String lastName;
-
 	private String email;
 	private String designation;
 	private String passowrd;
 	private String contact;
 	private boolean status;
-
+	@Lob
+	private Blob profilepic;
+	@DateTimeFormat(pattern = "MM-dd-yyyy")
+	private Date dob;
+	private String gender;
+	private String salConfigured;
+	@Transient
+	private Address address;
+	@Transient
+	private Department department;
+	@ManyToOne
+	private Hr hr;
+	
 	public boolean getStatus() {
 		return status;
 	}
@@ -36,23 +52,6 @@ public class Employee {
 	public void setStatus(boolean status) {
 		this.status = status;
 	}
-
-	@Lob
-	private Blob profilepic;
-
-	@DateTimeFormat(pattern = "MM-dd-yyyy")
-	private Date dob;
-	private String gender;
-	private String salConfigured;
-
-	@Transient
-	private Address address;
-
-	@Transient
-	private Department department;
-
-	@ManyToOne
-	private Hr hr;
 
 	public int getId() {
 		return id;

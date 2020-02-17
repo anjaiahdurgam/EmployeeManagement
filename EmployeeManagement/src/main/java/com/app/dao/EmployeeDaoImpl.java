@@ -1,8 +1,7 @@
 package com.app.dao;
 
+import java.util.ArrayList;
 import java.util.List;
-
-import javax.persistence.OneToOne;
 
 import org.hibernate.Criteria;
 import org.hibernate.Query;
@@ -30,7 +29,9 @@ public class EmployeeDaoImpl implements IEmployeeDao {
 		this.sessionFactory = sessionFactory;
 	}
 
+	@SuppressWarnings("unchecked")
 	public Employee getEmpByCredential(int empId, String password) {
+		System.out.println(empId);
 
 		/*
 		 * // By using HQL Query String
@@ -62,7 +63,7 @@ public class EmployeeDaoImpl implements IEmployeeDao {
 
 		Session session = sessionFactory.getCurrentSession();
 		int id = (Integer) session.save(employee);
-		
+
 		employee.getAddress().setEmployee(employee);
 		session.save(employee.getAddress());
 		// session.save(employee.getDepartment());
@@ -70,10 +71,18 @@ public class EmployeeDaoImpl implements IEmployeeDao {
 	}
 
 	// get All Record
+	@SuppressWarnings("unchecked")
 	public List<Employee> getAllEmployee() {
 
 		String string = "from Employee e where status=:status";
-		List employeeList = sessionFactory.getCurrentSession().createQuery(string).setParameter("status",true).list();
+		List<Employee> employeeList = new ArrayList<Employee>();
+		try {
+			employeeList = sessionFactory.getCurrentSession().createQuery(string)
+					.setParameter("status", true).list();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		
 		return employeeList;
 	}
 
@@ -94,14 +103,14 @@ public class EmployeeDaoImpl implements IEmployeeDao {
 		Session session = sessionFactory.getCurrentSession();
 		Employee employee = (Employee) sessionFactory.getCurrentSession().get(Employee.class, id);
 		employee.setStatus(false);
-	
-		if (session!=null) {
+
+		if (session != null) {
 			session.update(employee);
 		}
 	}
 
 	// Get Address data with Respect Employee Class@OneToOne
-	//private Employee employee;select * from address_tb where employee_id=1;
+	// private Employee employee;select * from address_tb where employee_id=1;
 	public Address getAddress(Employee emp) {
 
 		String string = "from Address a where a.employee =:emp";

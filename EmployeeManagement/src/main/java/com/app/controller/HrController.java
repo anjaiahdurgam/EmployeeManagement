@@ -56,7 +56,7 @@ public class HrController {
 	@RequestMapping(value = "/getAll")
 	public ModelAndView findAllData() {
 
-		List hrList = iHrService.findByAll();
+		List<Hr> hrList = iHrService.findByAll();
 
 		System.out.println(hrList);
 

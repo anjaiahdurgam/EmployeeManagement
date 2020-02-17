@@ -10,7 +10,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.app.entity.Employee;
 import com.app.entity.Hr;
 
 @Repository
@@ -35,24 +34,24 @@ public class HrDAOImpl implements IHrDAO {
 		return id;
 	}
 
+	@SuppressWarnings("unchecked")
 	public List<Hr> findAllDetails() {
 		String string = "from Hr h";
-		List hrList = sessionFactory.getCurrentSession().createQuery(string).list();
+		List<Hr> hrList = sessionFactory.getCurrentSession().createQuery(string).list();
 		return hrList;
 	}
 
 	public Hr getById(int hrId) {
-		// TODO Auto-generated method stub
+
 		return null;
 	}
 
 	public Hr updateHrDetails(Hr hr) {
-		// TODO Auto-generated method stub
+
 		return null;
 	}
 
 	public void deleteHr(int hrId) {
-		// TODO Auto-generated method stub
 
 	}
 
@@ -64,6 +63,7 @@ public class HrDAOImpl implements IHrDAO {
 
 	}
 
+	@SuppressWarnings("unchecked")
 	public Hr getHrCred(long hrId, String password) {
 		Session session = sessionFactory.getCurrentSession();
 
