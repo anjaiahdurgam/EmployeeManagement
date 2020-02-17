@@ -42,7 +42,6 @@ public class ApplicationContextConfig {
 		viewResolver.setSuffix(".jsp");
 		return viewResolver;
 	}
-
 	
 	@Bean(name = "dataSource")
 	public DataSource getDataSource() {

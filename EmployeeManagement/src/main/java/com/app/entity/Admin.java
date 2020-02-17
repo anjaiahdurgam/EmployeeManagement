@@ -32,7 +32,10 @@ public class Admin {
 
 	private String password;
 	private String email;
-	public long getAdminId() {
+	/*public long getAdminId() { // needs change for Admin dev time
+		return adminId;
+	}*/
+	public int getAdminId() {
 		return adminId;
 	}
 	public void setAdminId(int adminId) {
